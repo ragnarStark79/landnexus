@@ -51,21 +51,6 @@
 - **Payments:** UPI or Razorpay API (Demo only)
 
 ---
-
-## 🧩 System Architecture
-
-LandNexus/ ├── index.html
-├── about.html
-├── payment.html
-├── dashboard.html
-├── style/
-│ └── tailwind.css
-├── js/
-│ └── main.js
-├── assets/
-│ └── (images, icons)
-└── README.md
-
 ## 🛠️ Future Plans
 - Backend integration (Flask + MongoDB)
 - Real-time payment verification
