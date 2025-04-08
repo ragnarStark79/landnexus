@@ -68,10 +68,3 @@ This project is licensed under the MIT License.
 Built with ❤️ by **[Ragnar Stark]** – Making land records digital and accessible.
 
 ---
-
-**Would you like me to also generate:**
-- A landing page based on this?
-- A dark-mode toggle implementation?
-- Or a `CONTRIBUTING.md` / `LICENSE` file?
-
-## Let me know what else you’d like polished!
