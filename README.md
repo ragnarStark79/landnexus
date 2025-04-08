@@ -15,12 +15,6 @@
 
 ---
 
-## 🌐 Live Demo
-
-🔗 [Try the Demo](https://your-demo-link.com) *(Demo mode only – no real transactions)*
-
----
-
 ## ✨ Features
 
 - 🔒 **User Authentication**
@@ -60,25 +54,7 @@
 
 ## 🧩 System Architecture
 
-```mermaid
-graph TD
-    A[User Interface (Frontend)] --> B[Authentication System]
-    A --> C[Property Data Viewer]
-    A --> D[GIS Mapping Module]
-    A --> E[Tax Payment Gateway]
-    A --> F[Admin Dashboard]
-
-    B --> G[User DB]
-    C --> H[Property DB]
-    E --> I[Payment API]
-    D --> J[GIS Provider API]
-    F --> H
-    F --> G
----
-
-📁 Project Structure
-# LandNexus
-LandNexus/ ├── index.html
+**LandNexus/ ├── index.html
 ├── about.html
 ├── payment.html
 ├── dashboard.html
@@ -88,9 +64,9 @@ LandNexus/ ├── index.html
 │ └── main.js
 ├── assets/
 │ └── (images, icons)
-└── README.md
+└── README.md**
 
-🛠️ Future Plans
+## 🛠️ Future Plans
 - Backend integration (Flask + MongoDB)
 - Real-time payment verification
 - OTP-based login
@@ -98,19 +74,19 @@ LandNexus/ ├── index.html
 - Admin notification system
 - Mobile app version (Flutter)
 
-🙌 Contributors
-🌐 You! Want to contribute? Fork the repo and submit a pull request 🚀
+**🙌 Contributors**
+**🌐** You! Want to contribute? Fork the repo and submit a pull request 🚀
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License.
 
-Built with ❤️ by [Ragnar Stark] – Making land records digital and accessible.
+Built with ❤️ by **[Ragnar Stark]** – Making land records digital and accessible.
 
 ---
 
-Would you like me to also generate:
+**Would you like me to also generate:**
 - A landing page based on this?
 - A dark-mode toggle implementation?
 - Or a `CONTRIBUTING.md` / `LICENSE` file?
 
-Let me know what else you’d like polished!
+## Let me know what else you’d like polished!
