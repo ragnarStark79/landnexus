@@ -1,4 +1,4 @@
-# <img src="./assets/logo.png" alt="LandNexus Logo" width="50" valign="middle"/> LandNexus Property Tax Payment System <img src="https://img.shields.io/badge/Version-1.0.0_(Demo)-blue?style=for-the-badge" alt="Version"/> <img src="https://img.shields.io/badge/Status-Active_Development-brightgreen?style=for-the-badge" alt="Status"/>
+# <img src="./assets/logo.png" width="50" valign="middle"/> LandNexus Property Tax Payment System <img src="https://img.shields.io/badge/Version-1.0.0_(Demo)-blue?style=for-the-badge" alt="Version"/> <img src="https://img.shields.io/badge/Status-Active_Development-brightgreen?style=for-the-badge" alt="Status"/>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Tech Stack](https://img.shields.io/badge/Tech-HTML_|_Tailwind_|_JS-blueviolet.svg?style=flat-square)](...) [![Platform](https://img.shields.io/badge/Platform-Web_(Responsive)-lightgrey.svg?style=flat-square)](...)
