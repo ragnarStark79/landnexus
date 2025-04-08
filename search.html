@@ -1,0 +1,128 @@
+<!-- search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandNexus - Property Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e40af',
+                        'blue': '#3b82f6',
+                        'light-blue': '#bfdbfe',
+                        'gray-light': '#f3f4f6',
+                        'gray-dark': '#1f2937',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="font-inter bg-gray-light text-gray-dark min-h-screen">
+<!-- Navigation -->
+<nav class="bg-white shadow-md p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-xl font-poppins font-bold text-navy flex items-center">
+            <i data-lucide="file-text" class="w-6 h-6 mr-2"></i> LandNexus
+        </a>
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-navy focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 items-center">
+            <li><a href="index.html" class="hover:text-blue transition-colors">Home</a></li>
+            <li><a href="search.html" class="hover:text-blue transition-colors">Property Search</a></li>
+            <li><a href="tax-payment.html" class="hover:text-blue transition-colors">Tax Payment</a></li>
+            <li><a href="help.html" class="hover:text-blue transition-colors">Help & Support</a></li>
+            <li>
+                <button class="text-white bg-blue px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Login</button>
+            </li>
+            <li>
+                <button class="text-blue border border-blue px-4 py-2 rounded-md hover:bg-blue-50 transition-colors">Register</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Search Section -->
+<section class="max-w-7xl mx-auto py-12 px-4">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-poppins font-bold text-navy animate-fade-in">
+            Property Search
+        </h1>
+        <p class="text-gray-dark md:text-lg max-w-[700px] mx-auto animate-fade-in-delay">
+            Find detailed information about properties by address, owner name, or parcel ID.
+        </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto mb-12">
+        <div class="border-b border-gray-200">
+            <nav class="flex space-x-4" role="tablist">
+                <button id="tab-text" class="tab-active text-sm py-2 px-4 text-blue border-b-2 border-blue">Text Search</button>
+                <button id="tab-map" class="text-sm py-2 px-4 text-gray-dark hover:text-blue">Map Search</button>
+            </nav>
+        </div>
+
+        <div id="tab-content-text" class="mt-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-lg font-poppins font-semibold text-navy mb-2">Search by Text</h2>
+                <p class="text-gray-dark mb-4">Enter an address, owner name, or parcel ID to find property information</p>
+                <form id="search-form" class="flex flex-col sm:flex-row gap-3">
+                    <div class="relative flex-1">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500"></i>
+                        <input type="text" id="search-query" placeholder="123 Main St, John Smith, or AZ-12345-6789" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <button type="submit" id="search-btn" class="bg-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="tab-content-map" class="mt-6 hidden">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <h2 class="text-lg font-poppins font-semibold text-navy mb-2">Search by Map</h2>
+                <p class="text-gray-dark mb-4">Navigate the map and click on a property to view details</p>
+                <div class="h-[400px] bg-gray-200 rounded-md flex items-center justify-center">
+                    <div class="text-center p-6">
+                        <i data-lucide="map-pin" class="h-8 w-8 text-gray-500 mx-auto mb-2"></i>
+                        <h3 class="text-lg font-medium mb-2">Map view coming soon</h3>
+                        <p class="text-sm text-gray-500 mb-4">Our interactive map search feature is currently in development.</p>
+                        <button class="text-blue border border-blue px-4 py-2 rounded-md hover:bg-blue-50 transition-colors" onclick="alert('Feature coming soon. Try Text Search instead.')">Try Text Search Instead</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+    <div id="search-results" class="mt-8 hidden animate-fade-in">
+        <h2 class="text-2xl font-poppins font-semibold text-navy mb-6">Search Results</h2>
+        <div id="results-container" class="grid gap-6"></div>
+        <div class="mt-8 text-center">
+            <button class="bg-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Load More Results</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-navy text-white py-6">
+    <div class="max-w-7xl mx-auto text-center">
+        <p>© 2025 LandNexus. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/components/search.js"></script>
+</body>
+</html>

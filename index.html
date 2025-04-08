@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandNexus - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0071e3',
+                        'primary-light': '#47a9ff',
+                        'secondary': '#1d1d1f',
+                        'tertiary': '#86868b',
+                        'background': '#f5f5f7',
+                        'card': '#ffffff',
+                        'accent': '#06c',
+                    },
+                    fontFamily: {
+                        'sf': ['-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'apple': '0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02)',
+                        'apple-hover': '0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04)',
+                        'apple-btn': '0 2px 5px rgba(0, 0, 0, 0.1)'
+                    },
+                    backgroundImage: {
+                        'gradient-subtle': 'linear-gradient(to bottom, #f5f5f7, #ffffff)',
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="font-sf bg-background text-secondary antialiased min-h-screen" style="scroll-behavior: smooth;">
+<!-- Navigation -->
+<nav class="bg-card/80 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-10 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center h-16">
+        <a href="index.html" class="text-xl font-semibold text-secondary flex items-center">
+            <i data-lucide="file-text" class="w-6 h-6 mr-2 text-primary"></i> LandNexus
+        </a>
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-secondary focus:outline-none" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <ul id="nav-menu" class="hidden md:flex space-x-8 items-center">
+            <li><a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a></li>
+            <li><a href="search.html" class="text-sm font-medium hover:text-primary transition-colors">Property Search</a></li>
+            <li><a href="tax-payment.html" class="text-sm font-medium hover:text-primary transition-colors">Tax Payment</a></li>
+            <li><a href="help.html" class="text-sm font-medium hover:text-primary transition-colors">FAQ</a></li>
+            <li>
+                <button class="text-sm text-white bg-primary px-5 py-2 rounded-full hover:bg-primary-light transition-all duration-300 shadow-apple-btn">Login</button>
+            </li>
+            <li>
+                <button class="text-sm text-primary border border-primary px-5 py-2 rounded-full hover:bg-primary/5 transition-all duration-300">Register</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="relative pt-16 pb-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-subtle -z-10"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,113,227,0.05),transparent_70%)] -z-10"></div>
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal-animation">
+            <p class="text-primary text-sm mb-4 tracking-wide font-medium">New: Document verification now available</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-secondary mb-6 leading-tight tracking-tight">
+                Digital Land Records & Property Tax Management
+            </h1>
+            <p class="text-lg md:text-xl text-tertiary max-w-2xl mb-12 leading-relaxed">
+                Access your property information, verify land ownership, and manage payments easily through our secure online platform.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <a href="search.html" class="inline-flex justify-center items-center bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-light transition-all duration-300 shadow-apple-btn">
+                    Search Records
+                    <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                </a>
+                <a href="tax-payment.html" class="inline-flex justify-center items-center bg-secondary/5 text-secondary px-8 py-3 rounded-full font-medium hover:bg-secondary/10 transition-all duration-300">
+                    Pay Taxes
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Statistics Section -->
+<section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stats-container">
+        <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 stat-item">
+            <h3 class="text-4xl font-bold text-primary mb-2">5M+</h3>
+            <p class="text-tertiary">Property Records</p>
+        </div>
+        <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 stat-item">
+            <h3 class="text-4xl font-bold text-primary mb-2">2M+</h3>
+            <p class="text-tertiary">Registered Users</p>
+        </div>
+        <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 stat-item">
+            <h3 class="text-4xl font-bold text-primary mb-2">$1B+</h3>
+            <p class="text-tertiary">Taxes Collected</p>
+        </div>
+        <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 stat-item">
+            <h3 class="text-4xl font-bold text-primary mb-2">99%</h3>
+            <p class="text-tertiary">User Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modern Digital Solutions Section -->
+<section class="py-24 px-6 bg-gradient-subtle relative">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(0,113,227,0.04),transparent_60%)]"></div>
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal-animation">
+            <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Modern Digital Solutions for Land Records</h2>
+            <p class="text-tertiary max-w-2xl mx-auto">Our comprehensive platform offers a range of features designed to simplify property management and taxes.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 features-container">
+            <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 feature-item">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="search" class="w-6 h-6 text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3">Easy Property Search</h3>
+                <p class="text-tertiary">Verify ownership, status, and check any property details using land records, owner name, or parcel ID.</p>
+            </div>
+            <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 feature-item">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="file-text" class="w-6 h-6 text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3">Digital Land Records</h3>
+                <p class="text-tertiary">Get real-time updates on property status changes and payment confirmations.</p>
+            </div>
+            <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 feature-item">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="credit-card" class="w-6 h-6 text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3">Online Tax Payments</h3>
+                <p class="text-tertiary">Secure access ensures multiple payment options and immediate digital receipts.</p>
+            </div>
+            <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1 feature-item">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="shield" class="w-6 h-6 text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3">Ownership Verification</h3>
+                <p class="text-tertiary">Multiple access ensures your property data remains secure and protected.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Find Your Property Records Section -->
+<section class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal-animation">
+            <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Find Your Property Records Instantly</h2>
+            <p class="text-tertiary max-w-2xl mx-auto">Search by ID, owner name, or location to access detailed information about any registered property.</p>
+        </div>
+        <div class="max-w-lg mx-auto bg-card p-8 rounded-2xl shadow-apple">
+            <form id="search-form" class="space-y-6">
+                <div class="space-y-2">
+                    <label for="search-query" class="text-sm text-tertiary">Search property</label>
+                    <div class="relative">
+                        <i data-lucide="search" class="w-5 h-5 text-tertiary absolute left-3 top-3"></i>
+                        <input type="text" id="search-query" placeholder="Enter property ID, owner name, or address..." class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+                    <button type="button" id="search-by-id" class="bg-secondary/5 text-secondary px-4 py-2 rounded-xl hover:bg-secondary/10 transition-all text-sm font-medium">By Property ID</button>
+                    <button type="button" id="search-by-name" class="bg-secondary/5 text-secondary px-4 py-2 rounded-xl hover:bg-secondary/10 transition-all text-sm font-medium">By Owner Name</button>
+                    <button type="button" id="search-by-location" class="bg-secondary/5 text-secondary px-4 py-2 rounded-xl hover:bg-secondary/10 transition-all text-sm font-medium">By Location</button>
+                </div>
+                <button type="submit" id="search-btn" class="w-full bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-light transition-all duration-300 font-medium shadow-apple-btn">Search Records</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Manage Property Taxes Section -->
+<section class="py-24 px-6 bg-gradient-subtle relative">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(0,113,227,0.05),transparent_50%)]"></div>
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal-animation">
+            <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Manage Property Taxes Online</h2>
+            <p class="text-tertiary max-w-2xl mx-auto">Check tax status, download records anywhere, and make secure online payments.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1">
+                <h3 class="text-xl font-semibold text-secondary mb-4">Tax Payment History</h3>
+                <p class="text-tertiary mb-6">Enter your property ID or tax parcel ID to check status.</p>
+                <div class="space-y-6">
+                    <div>
+                        <label for="property-id" class="text-sm text-tertiary">Property ID</label>
+                        <input type="text" id="property-id" placeholder="Enter Property ID (e.g., LAND-123456)" class="w-full px-4 py-3 mt-1 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    </div>
+                    <button class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-light transition-all duration-300 shadow-apple-btn">
+                        View History
+                        <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-card p-8 rounded-2xl shadow-apple hover:shadow-apple-hover transition-all duration-300 transform hover:-translate-y-1">
+                <h3 class="text-xl font-semibold text-secondary mb-4">Payment Methods</h3>
+                <p class="text-tertiary mb-6">Choose your preferred payment method below.</p>
+                <div class="space-y-3">
+                    <button class="w-full inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-light transition-all duration-300 shadow-apple-btn">
+                        <i data-lucide="credit-card" class="w-5 h-5 mr-2"></i>
+                        Pay Using Credit Card
+                    </button>
+                    <button class="w-full inline-flex items-center justify-center bg-secondary/10 text-secondary px-6 py-3 rounded-xl hover:bg-secondary/20 transition-all duration-300">
+                        <i data-lucide="building-bank" class="w-5 h-5 mr-2"></i>
+                        Bank Transfer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Frequently Asked Questions Section -->
+<section class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal-animation">
+            <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Frequently Asked Questions</h2>
+            <p class="text-tertiary max-w-2xl mx-auto">Find answers to commonly asked questions about land records and property taxes.</p>
+        </div>
+        <div class="max-w-2xl mx-auto space-y-4">
+            <div class="bg-card rounded-2xl shadow-apple overflow-hidden faq-item">
+                <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none text-left">
+                    <span class="text-lg font-medium text-secondary">How do I search for my property records?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-tertiary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-tertiary">Use the search bar with your property ID, owner name, or address. Our system will quickly locate and display all relevant information associated with the property.</p>
+                </div>
+            </div>
+            <div class="bg-card rounded-2xl shadow-apple overflow-hidden faq-item">
+                <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none text-left">
+                    <span class="text-lg font-medium text-secondary">What documents do I need to verify property ownership?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-tertiary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-tertiary">You need a land title and ownership certificate. These documents establish your legal rights to the property and are essential for verification purposes.</p>
+                </div>
+            </div>
+            <div class="bg-card rounded-2xl shadow-apple overflow-hidden faq-item">
+                <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none text-left">
+                    <span class="text-lg font-medium text-secondary">How do I pay my property taxes online?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-tertiary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-tertiary">Navigate to the Tax Payment section and follow the payment options. We offer secure credit card payments and bank transfers for your convenience.</p>
+                </div>
+            </div>
+            <div class="bg-card rounded-2xl shadow-apple overflow-hidden faq-item">
+                <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none text-left">
+                    <span class="text-lg font-medium text-secondary">What if I find errors in my property records?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-tertiary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-tertiary">Contact support via email or phone for assistance. Our dedicated team will help resolve any discrepancies in your property records promptly.</p>
+                </div>
+            </div>
+            <div class="bg-card rounded-2xl shadow-apple overflow-hidden faq-item">
+                <button class="faq-toggle w-full flex justify-between items-center p-6 focus:outline-none text-left">
+                    <span class="text-lg font-medium text-secondary">Can I download official copies of my property documents?</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-tertiary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content px-6 pb-6 hidden">
+                    <p class="text-tertiary">Yes, log in and download certified copies from your dashboard. These documents are legally valid and can be used for official purposes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <a href="mailto:support@landnexus.gov" class="inline-flex items-center font-medium text-primary hover:underline">
+                Still have questions? Contact our team for assistance
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="bg-gradient-to-r from-primary to-primary-light rounded-3xl p-12 text-white text-center reveal-animation">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to get started?</h2>
+        <p class="text-white/80 max-w-xl mx-auto mb-8 text-lg">Join millions of property owners who manage their land records and taxes with ease.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="search.html" class="inline-flex justify-center items-center bg-white text-primary px-8 py-3 rounded-full font-medium hover:bg-white/90 transition-all duration-300">
+                Search Records
+            </a>
+            <a href="tax-payment.html" class="inline-flex justify-center items-center bg-white/20 text-white px-8 py-3 rounded-full font-medium hover:bg-white/30 transition-all duration-300">
+                Pay Taxes
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-secondary text-white py-16">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
+        <div class="col-span-1 md:col-span-2">
+            <h3 class="text-xl font-bold mb-6 flex items-center">
+                <i data-lucide="file-text" class="w-6 h-6 mr-2 text-primary"></i> LandNexus
+            </h3>
+            <p class="text-white/70 max-w-sm">Digital land records and property tax management platform. Simplifying property ownership verification and tax management for everyone.</p>
+        </div>
+        <div>
+            <h4 class="text-lg font-medium mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+                <li><a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                <li><a href="search.html" class="text-white/70 hover:text-white transition-colors">Property Search</a></li>
+                <li><a href="tax-payment.html" class="text-white/70 hover:text-white transition-colors">Tax Payments</a></li>
+                <li><a href="help.html" class="text-white/70 hover:text-white transition-colors">FAQ</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-medium mb-6">Contact</h4>
+            <ul class="space-y-3">
+                <li class="flex items-center">
+                    <i data-lucide="phone" class="w-5 h-5 mr-3 text-white/50"></i>
+                    <span class="text-white/70">(123) 456-7890</span>
+                </li>
+                <li class="flex items-center">
+                    <i data-lucide="mail" class="w-5 h-5 mr-3 text-white/50"></i>
+                    <a href="mailto:support@landnexus.gov" class="text-white/70 hover:text-white transition-colors">support@landnexus.gov</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 pt-10 mt-10 border-t border-white/10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-white/50 text-sm">© 2025 LandNexus. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="text-white/50 hover:text-white transition-colors">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="text-white/50 hover:text-white transition-colors">
+                    <i data-lucide="twitter" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="text-white/50 hover:text-white transition-colors">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="text-white/50 hover:text-white transition-colors">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Toast Container -->
+<div id="toast-container" class="fixed bottom-4 right-4 z-50"></div>
+
+<!-- Scripts -->
+<script src="./js/main.js"></script>
+<script src="./js/components/toast.js"></script>
+<script src="./js/components/search.js"></script>
+</body>
+</html>

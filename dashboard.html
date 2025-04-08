@@ -1,0 +1,138 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandNexus - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-blue': '#2c5282',
+                        'teal': '#4fd1c5',
+                        'light-teal': '#e0f7fa',
+                        'gradient-start': '#e0f7fa',
+                        'gradient-end': '#c3e8f8',
+                        'gray-light': '#f7fafc',
+                        'gray-dark': '#2d3748',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'custom-gradient': 'linear-gradient(to bottom, #e0f7fa, #c3e8f8)',
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="font-inter bg-gray-light text-gray-dark min-h-screen" style="scroll-behavior: smooth;">
+<!-- Navigation -->
+<nav class="bg-white shadow-md p-4 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-xl font-poppins font-bold text-dark-blue flex items-center">
+            <i data-lucide="file-text" class="w-6 h-6 mr-2"></i> LandNexus
+        </a>
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-dark-blue focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 items-center">
+            <li><a href="index.html" class="hover:text-teal transition-colors">Home</a></li>
+            <li><a href="search.html" class="hover:text-teal transition-colors">Property Search</a></li>
+            <li><a href="tax-payment.html" class="hover:text-teal transition-colors">Tax Payment</a></li>
+            <li><a href="help.html" class="hover:text-teal transition-colors">FAQ</a></li>
+            <li>
+                <button class="text-white bg-teal px-4 py-2 rounded-md hover:bg-teal-600 transition-colors">Login</button>
+            </li>
+            <li>
+                <button class="text-teal border border-teal px-4 py-2 rounded-md hover:bg-teal-50 transition-colors">Register</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Dashboard Section -->
+<section class="max-w-7xl mx-auto py-16 px-4 bg-gradient-to-b from-gradient-start to-gradient-end">
+    <h1 class="text-4xl font-poppins font-bold text-dark-blue text-center mb-6 animate-fade-in">User Dashboard</h1>
+    <p class="text-center text-gray-dark mb-12 max-w-2xl mx-auto animate-fade-in-delay">Track your property records, tax payments, and manage your account.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Property Overview -->
+        <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in">
+            <h2 class="text-2xl font-poppins font-semibold text-dark-blue mb-4">Property Overview</h2>
+            <div class="space-y-4">
+                <p><strong>Property ID:</strong> LAND-123456</p>
+                <p><strong>Owner:</strong> John Smith</p>
+                <p><strong>Area:</strong> 1,500 sq ft</p>
+                <p><strong>Tax Status:</strong> Paid</p>
+                <p><strong>Last Updated:</strong> Jan 10, 2025</p>
+                <a href="search.html" class="mt-4 inline-block bg-teal text-white px-4 py-2 rounded-md hover:bg-teal-600 transition-colors">View Details</a>
+            </div>
+        </div>
+
+        <!-- Tax Summary -->
+        <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in-delay">
+            <h2 class="text-2xl font-poppins font-semibold text-dark-blue mb-4">Tax Summary</h2>
+            <div class="space-y-4">
+                <p><strong>Total Tax Paid (2024):</strong> $1,500.00</p>
+                <p><strong>Pending Tax:</strong> $0.00</p>
+                <p><strong>Next Due Date:</strong> Mar 10, 2025</p>
+                <a href="tax-payment.html" class="mt-4 inline-block bg-teal text-white px-4 py-2 rounded-md hover:bg-teal-600 transition-colors">Pay Now</a>
+            </div>
+        </div>
+
+        <!-- Account Management -->
+        <div class="bg-white p-6 rounded-lg shadow-md animate-fade-in">
+            <h2 class="text-2xl font-poppins font-semibold text-dark-blue mb-4">Account Management</h2>
+            <div class="space-y-4">
+                <p><strong>Username:</strong> johnsmith</p>
+                <p><strong>Email:</strong> john@example.com</p>
+                <p><strong>Registered Since:</strong> Jan 01, 2023</p>
+                <button class="mt-4 bg-teal text-white px-4 py-2 rounded-md hover:bg-teal-600 transition-colors">Update Profile</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark-blue text-white py-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+        <div>
+            <h3 class="text-xl font-poppins font-bold mb-2">LandNexus</h3>
+            <p class="text-gray-300">Digital land records and property tax management platform.</p>
+        </div>
+        <div>
+            <h4 class="text-lg font-poppins font-semibold mb-2">Quick Links</h4>
+            <ul class="text-gray-300 space-y-1">
+                <li><a href="index.html" class="hover:text-teal">Home</a></li>
+                <li><a href="search.html" class="hover:text-teal">Property Search</a></li>
+                <li><a href="tax-payment.html" class="hover:text-teal">Tax Payments</a></li>
+                <li><a href="help.html" class="hover:text-teal">FAQ</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-poppins font-semibold mb-2">Contact</h4>
+            <p class="text-gray-300">Phone: (123) 456-7890<br>Email: <a href="mailto:support@landnexus.gov" class="hover:text-teal">support@landnexus.gov</a></p>
+        </div>
+    </div>
+    <div class="text-center text-gray-500 mt-6">© 2025 LandNexus. All rights reserved.</div>
+</footer>
+
+<!-- Toast Container -->
+<div id="toast-container" class="fixed bottom-4 right-4 z-50"></div>
+
+<!-- Scripts -->
+<script src="./js/main.js"></script>
+<script src="./js/components/toast.js"></script>
+</body>
+</html>

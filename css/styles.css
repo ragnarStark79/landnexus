@@ -1,0 +1,200 @@
+/* css/styles.css */
+
+/* Base animations */
+.reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Toast styles */
+#toast-container {
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.toast {
+    background-color: #0071e3;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.toast.success {
+    background-color: #34c759;
+}
+
+.toast.error {
+    background-color: #ff3b30;
+}
+
+.toast.warning {
+    background-color: #ff9500;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 16px 16px;
+        opacity: 0;
+        transform: translateY(-10px);
+        z-index: 40;
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+
+    #nav-menu li {
+        margin: 0.75rem 0;
+        width: 100%;
+    }
+
+    #nav-menu li a,
+    #nav-menu li button {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+
+    #nav-menu li button {
+        margin-top: 0.5rem;
+    }
+}
+
+/* FAQ accordion animations */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-toggle i {
+    transition: transform 0.3s ease;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #0071e3;
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
+}
+
+/* Button hover effects */
+button,
+a[href]:not(.no-hover) {
+    transition: all 0.3s ease;
+}
+
+/* Improve details/summary styling */
+details {
+    transition: all 0.3s ease;
+}
+
+details summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f7;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d1d6;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a6;
+}
+
+/* Smooth page transitions */
+body {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Improve image handling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom card hover effect */
+.shadow-apple {
+    transition: all 0.3s ease;
+}
+
+.shadow-apple:hover {
+    transform: translateY(-5px);
+}
+
+/* Link animations */
+a:not(.no-underline-effect) {
+    position: relative;
+}
+
+a:not(.no-underline-effect)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+a:not(.no-underline-effect):hover::after {
+    width: 100%;
+}
+
+/* Ensure buttons don't have underline effects */
+button a::after,
+a.bg-primary::after,
+a.bg-secondary::after,
+a.border::after,
+a.inline-flex::after {
+    display: none;
+}
+
+/* Add some parallax effect to background */
+.bg-parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
