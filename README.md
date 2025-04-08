@@ -54,7 +54,7 @@
 
 ## 🧩 System Architecture
 
-**LandNexus/ ├── index.html
+LandNexus/ ├── index.html
 ├── about.html
 ├── payment.html
 ├── dashboard.html
@@ -64,7 +64,7 @@
 │ └── main.js
 ├── assets/
 │ └── (images, icons)
-└── README.md**
+└── README.md
 
 ## 🛠️ Future Plans
 - Backend integration (Flask + MongoDB)
